@@ -12,7 +12,8 @@ function drawTable()
             var data = response[i];
             var table_row = show_table(data);
             $("#data_table").append(table_row);
-        }  
+        }
+        document.getElementById("loader").style.display = "none";  
       }
   });
 }
