@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Visualization</title>
+        <link rel="stylesheet" href="static/css/index.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src = "https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type = "text/javascript">
+            var catagory = '{{ catagory | tojson | safe }}'
+        </script>
+        <script src = "static/js/data_row.js"></script>
+    </head>
+    <body>
+
+    <div>
+        <div class="use_filter">
+            <div class="table_title">
+                <center>
+                    <h1>User's Complete Detail</h1>
+                </center>
+            </div>
+            <div class="filter">
+                <form class="filter_form">
+                    <h4>Sex</h4>
+                    <label class="checkbox" id="sex_filter">
+                      <input type="checkbox" value="" onchange="handleSexfilter(this, 'Male');" checked>Male
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="" onchange="handleSexfilter(this, 'Female');" checked>Female
+                    </label>
+                  </form>
+                <form class="filter_form">
+                    <h4>Race</h4>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRacefilter(this, 'White');" checked>White
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRacefilter(this, 'Black');" checked>Black
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRacefilter(this, 'Asian-Pac-Islander');" checked>Asian-Pac-Islander
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRacefilter(this, 'Amer-Indian-Eskimo');" checked>Amer-Indian-Eskimo
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRacefilter(this, 'Other');" checked>Other
+                    </label>
+                  </form>
+                <form class="filter_form">
+                    <h4>Relationship</h4>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRelationshipfilter(this, 'Not-in-family');" checked>Not-in-family
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRelationshipfilter(this, 'Husband');" checked>Husband
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRelationshipfilter(this, 'Wife');" checked>Wife
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRelationshipfilter(this, 'Unmarried');" checked>Unmarried
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRelationshipfilter(this, 'Other-relative');" checked>Other-relative
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" onchange="handleRelationshipfilter(this, 'Own-child');" checked>Own-child
+                    </label>
+                  </form>
+            </div>
+        </div>
+        <div id="data_row" class="data_row_style">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="table_heading">
+                        <th>Age</th>
+                        <th>Workclass</th>
+                        <th>fnlwgt</th>
+                        <th>Education</th>
+                        <th>Education-num</th>
+                        <th>Marital-status</th>
+                        <th>Occupation</th>
+                        <th>Relationship</th>
+                        <th>Race</th>
+                        <th>Sex</th>
+                        <th>Capital-profit</th>
+                        <th>Capital-loss</th>
+                        <th>Hours per week</th>
+                        <th>Native-Country</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody id="data_table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

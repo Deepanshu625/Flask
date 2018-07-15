@@ -1,0 +1,49 @@
+.sex_style{
+    width: 46%;
+    height: 50%;
+    margin: 0 auto;
+    float: left;
+}
+.relationship_style{
+    width: 46%;
+    height: 50%;
+    margin: 0 auto;
+    float: right;
+}
+.next_button_div{
+    height: 10%;
+    width: 10%;
+    margin-top: 30%;
+    margin-left: 40%;
+}
+.next_button{
+    height: 45px !important;
+    width: 160px !important;
+    color: #ffff;
+    font-size: 3vh;
+    font-style: bold;
+    background-color: #0099ff;
+}
+.use_filter{
+    height: 20%;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.table_title{
+    width: 100%;
+    height: 50%;
+    margin-bottom: -2%;
+}
+.table_heading{
+    background-color: #212529;
+    color: #ffff
+}
+.filter{
+    width: 100%;
+    height: 50%;
+    
+}
+.filter_form{
+    float: right;
+    margin-right: 3%;
+}
